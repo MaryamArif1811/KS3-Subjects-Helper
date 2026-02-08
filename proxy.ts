@@ -1,14 +1,3 @@
-import { NextResponse } from "next/server";
-
-export function middleware() {
-  return NextResponse.next();
+export default function proxy(request: Request) {
+  return Response.next();
 }
-
-export const config = {
-  matcher: [
-    "/",
-    "/chat/:id",
-    "/api/:path*",
-    "/((?!_next/static|_next/image|favicon.ico|sitemap.xml|robots.txt).*)",
-  ],
-};
